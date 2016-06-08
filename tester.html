@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" type="text/css" href="invisibles.css">
+		<script src="invisibles.js"></script>
+    	<style media="screen">
+			#nodeTest{
+				white-space: pre;
+			}
+    	</style>
+    	<title>Font Tester</title>
+	</head>
+	<body onload="nodeShowInvis(document.getElementById('nodeTest'));">
+		<button onclick="nodeHideInvis(document.getElementById('nodeTest'));">clear</button>
+		<button onclick="nodeShowInvis(document.getElementById('nodeTest'));">set</button><br>
+		<button onclick="nodeHideInvis(document.getElementById('nodeTest2'));">clear</button>
+		<button onclick="nodeShowInvis(document.getElementById('nodeTest2'));">set</button>
+	    <p class="show-invisibles">This &nbsp;is &#xF000;a A &#xF001;	TEST	&#x0009;of the TEST&#x000D;FONT
+			&spades;asdf
+		</p>
+		<textarea oninput="this.value = showInvisibles(this.value);" class="show-invisibles also" rows="10" cols="50">Testing information</textarea>
+	    <p id="nodeTest" class="test show-invisibles">This &nbsp;is a A TEST of the TEST FONT
+	    asdf
+	    </p>
+		<div id="nodeTest2" class="test show-invisibles">
+			<p>
+				This is a TEST of the NEST
+	    		asdf
+			</p>
+	    </div>
+	</body>
+</html>
